@@ -1,6 +1,8 @@
 import sys
 from collections import OrderedDict
 
+import IPython as IPython
+
 import data
 from options.train_options import TrainOptions
 from util.iter_counter import IterationCounter
@@ -30,6 +32,8 @@ for epoch in tqdm(iter_counter.training_epochs()):
     iter_counter.record_epoch_start(epoch)
     for i, data_i in enumerate(tqdm(dataloader), start=iter_counter.epoch_iter):
         iter_counter.record_one_iteration()
+
+        # IPython.embed(header="123")
 
         # Training
         # train generator

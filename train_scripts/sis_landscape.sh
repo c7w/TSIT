@@ -2,11 +2,11 @@
 
 set -x
 
-NAME='sis_ade20k'
+NAME='sis_landscape'
 TASK='SIS'
-DATA='ade20k'
-CROOT='./datasets/ADEChallengeData2016'
-SROOT='./datasets/ADEChallengeData2016'
+DATA='landscape'
+CROOT='./datasets/landscape'
+SROOT='./datasets/landscape'
 CKPTROOT='./checkpoints'
 WORKER=4
 
@@ -15,7 +15,7 @@ python train.py \
     --task $TASK \
     --gpu_ids 0 \
     --checkpoints_dir $CKPTROOT \
-    --batchSize 24 \
+    --batchSize 4 \
     --dataset_mode $DATA \
     --croot $CROOT \
     --sroot $SROOT \
@@ -24,8 +24,8 @@ python train.py \
     --num_upsampling_layers more \
     --use_vae \
     --alpha 1.0 \
-    --display_freq 5000 \
-    --save_epoch_freq 20 \
+    --display_freq 200 \
+    --save_epoch_freq 5 \
     --niter 100 \
     --niter_decay 100 \
     --lambda_vgg 20 \

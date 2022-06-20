@@ -74,7 +74,7 @@ def get_transform(opt, params, method=Image.BICUBIC, normalize=True, toTensor=Tr
 
 
 def normalize():
-    return transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+    return transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))  # Mean, std
 
 
 def __resize(img, w, h, method=Image.BICUBIC):
