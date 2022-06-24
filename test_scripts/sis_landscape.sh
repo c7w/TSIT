@@ -9,7 +9,7 @@ CROOT='./datasets/landscape'
 SROOT='./datasets/landscape'
 CKPTROOT='./checkpoints'
 WORKER=4
-RESROOT='./results'
+RESROOT='./results2'
 EPOCH='latest'
 
 python test.py \
@@ -17,7 +17,7 @@ python test.py \
     --task $TASK \
     --gpu_ids 0 \
     --checkpoints_dir $CKPTROOT \
-    --batchSize 1 \
+    --batchSize 16 \
     --dataset_mode $DATA \
     --croot $CROOT \
     --sroot $SROOT \

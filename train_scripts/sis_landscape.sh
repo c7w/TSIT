@@ -25,8 +25,10 @@ python train.py \
     --use_vae \
     --alpha 1.0 \
     --display_freq 200 \
-    --save_epoch_freq 5 \
-    --niter 100 \
-    --niter_decay 100 \
-    --lambda_vgg 20 \
-    --lambda_feat 10
+    --save_epoch_freq 1 \
+    --niter 30 \
+    --niter_decay 40 \
+    --lambda_vgg 10 \
+    --lambda_feat 5 \
+    --which_epoch 38 \
+    --continue_train

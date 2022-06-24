@@ -129,7 +129,8 @@ def save_image(image_numpy, image_path, create_dir=False):
     image_pil = Image.fromarray(image_numpy)
 
     # save to png
-    image_pil.save(image_path.replace('.jpg', '.png'))
+    # image_pil.save(image_path.replace('.jpg', '.png'))
+    image_pil.save(image_path.replace('.png', '.jpg'))
 
 
 def mkdirs(paths):
